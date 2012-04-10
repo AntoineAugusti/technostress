@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^technostress.fr [NC]
+RewriteRule (.*) http://www.technostress.fr/$1 [QSA,R=301,L]
+RewriteRule ^([a-z]+)$ $1.php [L,QSA]
+RewriteRule ^([0-9]+)$ $1.php [L,QSA]
+RewriteRule causes-effets causes-effets.php [L,QSA]
+ErrorDocument 404 /404
+ErrorDocument 403 /404
+ErrorDocument 500 /404
